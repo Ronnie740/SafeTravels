@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SafeTravels - Kenya - Travel</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- JS file path for live Server -->
+		<!-- <script src="/script.js" defer></script> -->
+		<!-- JS File Path for xampp-->
+		<script src="../Coursework2/script.js" defer></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<style>
+		/* file paths for xampp */
+		/* #bg {
+			background-image: url(../Coursework2/Images/travel.jpg);
+			background-repeat: no-repeat;
+		}
+		#accomodation {
+			background-image: url(../Coursework2/Images/accomodation.jpg);
+			background-repeat: repeat;
+		} */
+		/* file paths for live server */
+		#bg {
+			background-image: url(/Images/travel.jpg);
+			background-repeat: no-repeat;
+		}
+		#accomodation {
+			background-image: url(/Images/accomodation.jpg);
+			background-repeat: repeat;
+		}
+	</style>
+	<body class="overflow-auto font-['Nunito',sans-serif]">
+		<div id="bg" class="bg-cover bg-center overflow-auto pt-56 relative">
+			<header class="flex bg-gradient-to-b from-[#091133] to-transparent fixed mt-[-224px] left-0 right-0 z-20">
+				<nav class="flex-grow text-white">
+					<img src="./Images/Logo.png" alt="Website_Logo" class="float-left w-auto h-40 p-5" />
+					<div class="hidden lg:block">
+						<ul class="list-none justify-center float-right text-2xl text-center p-5 z-0">
+							<li class="float-left p-5">
+								<a href="home.html" class="hover:bg-blue-800 p-5 rounded-md hover:text-white">Home</a>
+							</li>
+							<li class="float-left p-5">
+								<a href="#" class="hover:bg-blue-800 p-5 rounded-md hover:text-white relative" id="dropdown">Country</a>
+								<ul class="invisible rounded-md mt-4 absolute z-30 mx-1 top-20" id="dropdown-ul">
+									<li class="p-2 bg-blue-900 rounded-md hover:bg-blue-500"><a href="Mauritius.html">Mautirius</a></li>
+									<li class="p-2 bg-blue-800 rounded-md hover:bg-blue-500"><a href="uk.html">UK</a></li>
+									<li class="p-2 bg-blue-900 rounded-md hover:bg-blue-500"><a href="kenya.html">Kenya</a></li>
+								</ul>
+							</li>
+							<li class="float-left p-5">
+								<a href="about.html" class="hover:bg-blue-800 p-5 rounded-md hover:text-white">About Us</a>
+							</li>
+							<li class="float-left p-5">
+								<a href="contact.html" class="hover:bg-blue-800 p-5 rounded-md hover:text-white">Contact Us</a>
+							</li>
+						</ul>
+					</div>
+					<!-- Small screen navigation -->
+					<div class="float-right lg:hidden pr-4">
+						<button class="hover:bg-blue-900 rounded-md hover:text-white px-1 mx-3 my-16 nav-toggler focus:outline-none" id="menuIcon">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 lx-10" viewBox="0 0 20 20" fill="currentColor">
+								<path
+									fill-rule="evenodd"
+									d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+									clip-rule="evenodd"
+								></path>
+							</svg>
+						</button>
+					</div>
+					<!-- Small screen nav bar -->
+					<div class="bg-blue-900 w-full rounded-md absolute mt-32 hidden lg:hidden" id="navSm">
+						<div class="w-full">
+							<div class="px-3 py-2 rounded text-white hover:bg-blue-600">
+								<a href="./home.html"> <span>Home</span></a>
+							</div>
+							<div class="px-3 py-2 rounded text-white-500 hover:bg-blue-600">
+								<a href="#" class="rounded-md hover:text-white" id="smDropdown">Country</a>
+								<ul class="hidden rounded-md mt-4" id="smDropdown-ul">
+									<li class="p-5 bg-blue-700 rounded-md"><a href="Mauritius.html">Mautirius</a></li>
+									<li class="p-5 bg-blue-800 rounded-md"><a href="uk.html">UK</a></li>
+									<li class="p-5 bg-blue-700 rounded-md"><a href="kenya.html">Kenya</a></li>
+								</ul>
+							</div>
+							<div class="px-3 py-2 rounded text-white hover:bg-blue-600">
+								<a href="./about.html"> <span>About Us</span></a>
+							</div>
+							<div class="px-3 py-2 rounded text-white hover:bg-blue-600">
+								<a href="./contact.html"> <span>Contact Us</span></a>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</header>
+
+			<section class="flex flex-col text-white" id="title">
+				<div class="flex flex-col mb-24 md:mb-32">
+					<h1 class="md:text-6xl sm:text-4xl text-3xl ml-10 lg:ml-20 font-extrabold font-['Nunito',sans-serif] my-auto">Kenya - Travel!</h1>
+				</div>
+			</section>
+		</div>
+
+		<main>
+			<!-- Services nav -->
+			<div class="grid grid-cols-2 lg:grid lg:grid-cols-6 gap-4 mx-20 font-['Nunito',sans-serif] font-extrabold text-white text-lg">
+				<!-- Country -->
+				<div class="md:col-span-1 p-5 bg-blue-600 hover:bg-blue-800 text-center rounded-md my-3 relative w-full h-16 lg:w-auto lg:h-auto">
+					<a href="kenya.html" class="absolute w-full h-full p-5 top-0 left-0 rounded-md">Kenya</a>
+				</div>
+				<!-- service -->
+				<div class="md:col-span-1 p-5 bg-blue-800 text-center rounded-md my-3 relative w-full h-16 lg:w-auto lg:h-auto">Travel</div>
+				<!-- service -->
+				<div class="md:col-span-1 p-5 bg-blue-600 hover:bg-blue-800 cursor-pointer text-center rounded-md my-3 relative w-full h-16 lg:w-auto lg:h-auto">
+					<a href="kenya_health.html" class="absolute w-full h-full p-5 top-0 left-0 rounded-md">Health</a>
+				</div>
+				<!-- service -->
+				<div class="md:col-span-1 p-5 bg-blue-600 hover:bg-blue-800 text-center rounded-md my-3 relative w-full h-16 lg:w-auto lg:h-auto">
+					<a href="kenya_education.html" class="absolute w-full h-full p-5 top-0 left-0 rounded-md">Education</a>
+				</div>
+				<!-- service -->
+				<div class="md:col-span-1 p-5 bg-blue-600 hover:bg-blue-800 text-center rounded-md my-3 relative w-full h-16 lg:w-auto lg:h-auto">
+					<a href="kenya_night_life.html" class="absolute w-full h-full p-5 top-0 left-0 rounded-md">Night Life</a>
+				</div>
+				<!-- service -->
+				<div class="md:col-span-1 p-5 bg-blue-600 hover:bg-blue-800 text-center rounded-md my-3 relative w-full h-16 lg:w-auto lg:h-auto">
+					<a href="kenya_entertainment.html" class="absolute w-full h-full p-5 top-0 left-0 rounded-md">Entertainment</a>
+				</div>
+			</div>
+			<!-- end -->
+			<div class="flex-grow mx-auto my-3 text-2xl xl:text-3xl text-center">
+				<p>
+					Kenya is one of the world's magnificent wildlife destinations!<br />
+					Its parks, reserves and private conservancies are home to some of <br />
+					the highest and most diverse populations of wildlife on the planet. <br />
+					Traveling across vast landscapes bathedin soft morning light, your<br />
+					African dreams unfold before your eyes.
+				</p>
+			</div>
+
+			<!--Accomodation-->
+			<div class="bg-[#F1F1F1] py-4 h-auto" id="accomodation">
+				<h1 class="md:text-4xl text-3xl text-center font-extrabold relative text-white">Accomodation</h1>
+				<div class="grid grid-rows-3 gap-4 mx-5 relative">
+					<!-- Service Cards -->
+					<!--Card 1-->
+					<div class="bg-[#C4C4C4] backdrop-filter backdrop-blur-xl bg-opacity-50 rounded-md my-4 lg:grid lg:grid-cols-2 lg:gap-0 grid grid-cols-1 gap-4 m-0 h-fit">
+						<div class="cols-span-1 p-2 sm:my-auto mx-auto w-full">
+							<img src="./Images/lodge.jpg" alt="Hotel" class="rounded-md object-cover" />
+						</div>
+						<div class="col-span-1 my-auto">
+							<div class="w-auto h-auto bg-white mx-2 mt-2 mb-2 my-auto rounded-md">
+								<h1 class="text-2xl md:text-3xl text-center font-extrabold text-blue-800">Entumoto Safari Camp</h1>
+								<p class="text-xl md:text-2xl text-center my-2 line-clamp-5">
+									Entumoto is an elegant, authentic, stylish camp with a history going back to the 1920's. This family owned safari camp is run by Swedish and Maasai families. It is
+									situated in a beautifully secluded valley overlooking the Masai Mara. It has a unique position within its own wildlife conservancy with direct access to the park.
+								</p>
+								<div class="flex">
+									<a
+										class="md:p-3 p-2 my-4 mx-auto text-xl md:text-2xl font-extrabold text-center bg-blue-900 hover:bg-blue-500 text-white rounded-full"
+										href="https://www.tripadvisor.com/Hotel_Review-g294209-d1929088-Reviews-Entumoto_Safari_Camp-Maasai_Mara_National_Reserve_Rift_Valley_Province.html"
+										target="blank"
+										>Learn More</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--End-->
+
+					<!--Card 2-->
+					<div class="bg-[#C4C4C4] backdrop-filter backdrop-blur-xl bg-opacity-50 rounded-md my-4 g:grid lg:grid-cols-2 lg:gap-0 grid grid-cols-1 gap-4 m-0 h-fit">
+						<div class="col-span-1 my-auto w-full">
+							<div class="w-auto h-auto bg-white mx-2 mt-2 mb-2 my-auto rounded-md">
+								<h1 class="text-2xl md:text-3xl text-center font-extrabold text-blue-800">Mara Intrepids Tented Camp</h1>
+								<p class="text-xl md:text-2xl text-center my-2 p-2">
+									Overlooking the Talek River, at the very confluence of Mara’s four game-viewing areas, Mara Intrepids Camp enjoys one of the most spectacular locations in the
+									world’s best-known wilderness.
+								</p>
+								<div class="flex">
+									<a
+										class="md:p-3 p-2 my-4 mx-auto text-xl md:text-2xl font-extrabold text-center bg-blue-900 hover:bg-blue-500 text-white rounded-full"
+										href="https://www.tripadvisor.com/Hotel_Review-g294209-d308159-Reviews-Mara_Intrepids_Tented_Camp-Maasai_Mara_National_Reserve_Rift_Valley_Province.html"
+										target="blank"
+										>Learn More</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="cols-span-1 p-2 sm:my-auto mx-auto w-full">
+							<img src="./Images/lodge2.jpg" alt="Hotel" class="rounded-md object-cover" />
+						</div>
+					</div>
+					<!--End-->
+
+					<!--Card 3-->
+					<div class="bg-[#C4C4C4] backdrop-filter backdrop-blur-xl bg-opacity-50 rounded-md my-4 g:grid lg:grid-cols-2 lg:gap-0 grid grid-cols-1 gap-4 m-0 h-fit">
+						<div class="cols-span-1 p-2 sm:my-auto mx-auto w-full">
+							<img src="./Images/lodge3.jpeg" alt="Hotel" class="rounded-md object-cover" />
+						</div>
+						<div class="col-span-1 my-auto h-auto w-auto">
+							<div class="w-auto h-auto bg-white mx-2 mt-2 mb-2 my-auto rounded-md">
+								<h1 class="text-2xl md:text-3xl text-center font-extrabold text-blue-800">Elewana Sand River Masai Mara</h1>
+								<p class="text-xl md:text-2xl text-center my-2 line-clamp-4 p-2">
+									Located on the banks of a river from which it has taken its name, Sand River Masai Mara is located within the Masai Mara National Reserve, close to the Tanzanian
+									border. Situated on a secluded and picturesque site, the camp replicates the heyday of exclusive permanent tented camps of the late 1920’s. The interior fixtures
+									and furnishings mirror this period perfectly, reminding all who visit of the countless Hollywood movies that have paid homage to a classic era of African adventure.
+								</p>
+								<div class="flex">
+									<a
+										class="md:p-3 p-2 my-4 mx-auto text-xl md:text-2xl font-extrabold text-center bg-blue-900 hover:bg-blue-500 text-white rounded-full"
+										href="https://www.tripadvisor.com/Hotel_Review-g294209-d5062854-Reviews-Elewana_Sand_River_Masai_Mara-Maasai_Mara_National_Reserve_Rift_Valley_Province.html"
+										target="blank"
+										>Learn More</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--End-->
+				</div>
+			</div>
+			<!--End-->
+		</main>
+
+		<footer class="bg-slate-100 py-5">
+			<div class="flex justify-center">
+				<div class="w-1/2">
+					<p class="text-center">Copyright &copy; 2022 Safe Travels</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

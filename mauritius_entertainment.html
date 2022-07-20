@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SafeTravels - Mauritius - Entertainment</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- JS file path for live Server -->
+		<!-- <script src="/script.js" defer></script> -->
+		<!-- JS File Path for xampp-->
+		<script src="../Coursework2/script.js" defer></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<style>
+		/* file path for xampp */
+		/* #bg {
+			background-image: url(../Coursework2/Images/entertainment.jpg);
+			background-repeat: no-repeat;
+		}
+		#entertainment {
+			background-image: url(../Coursework2/Images/entertainment2.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		} */
+		/* file path for live server */
+		#bg {
+			background-image: url(/Images/entertainment.jpg);
+			background-repeat: no-repeat;
+		}
+		#entertainment {
+			background-image: url(/Images/entertainment2.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	</style>
+	<body class="overflow-auto font-['Nunito',sans-serif]">
+		<div id="bg" class="bg-cover bg-center overflow-auto pt-56 relative">
+			<header class="flex bg-gradient-to-b from-[#091133] to-transparent fixed mt-[-224px] left-0 right-0 z-20">
+				<nav class="flex-grow text-white">
+					<img src="./Images/Logo.png" alt="Website_Logo" class="float-left w-auto h-40 p-5" />
+					<div class="hidden lg:block">
+						<ul class="list-none justify-center float-right text-2xl text-center p-5 z-0">
+							<li class="float-left p-5">
+								<a href="home.html" class="hover:bg-blue-800 p-5 rounded-md hover:text-white">Home</a>
+							</li>
+							<li class="float-left p-5">
+								<a href="#" class="hover:bg-blue-800 p-5 rounded-md hover:text-white relative" id="dropdown">Country</a>
+								<ul class="invisible rounded-md mt-4 absolute z-30 mx-1 top-20" id="dropdown-ul">
+									<li class="p-2 bg-blue-900 rounded-md hover:bg-blue-500"><a href="Mauritius.html">Mautirius</a></li>
+									<li class="p-2 bg-blue-800 rounded-md hover:bg-blue-500"><a href="uk.html">UK</a></li>
+									<li class="p-2 bg-blue-900 rounded-md hover:bg-blue-500"><a href="kenya.html">Kenya</a></li>
+								</ul>
+							</li>
+							<li class="float-left p-5">
+								<a href="about.html" class="hover:bg-blue-800 p-5 rounded-md hover:text-white">About Us</a>
+							</li>
+							<li class="float-left p-5">
+								<a href="contact.html" class="hover:bg-blue-800 p-5 rounded-md hover:text-white">Contact Us</a>
+							</li>
+						</ul>
+					</div>
+					<!-- Small screen navigation -->
+					<div class="float-right lg:hidden pr-4">
+						<button class="hover:bg-blue-900 rounded-md hover:text-white px-1 mx-3 my-16 nav-toggler focus:outline-none" id="menuIcon">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 lx-10" viewBox="0 0 20 20" fill="currentColor">
+								<path
+									fill-rule="evenodd"
+									d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+									clip-rule="evenodd"
+								></path>
+							</svg>
+						</button>
+					</div>
+					<!-- Small screen nav bar -->
+					<div class="bg-blue-900 w-full rounded-md absolute mt-32 hidden lg:hidden" id="navSm">
+						<div class="w-full">
+							<div class="px-3 py-2 rounded text-white hover:bg-blue-600">
+								<a href="./home.html"> <span>Home</span></a>
+							</div>
+							<div class="px-3 py-2 rounded text-white-500 hover:bg-blue-600">
+								<a href="#" class="rounded-md hover:text-white" id="smDropdown">Country</a>
+								<ul class="hidden rounded-md mt-4" id="smDropdown-ul">
+									<li class="p-5 bg-blue-700 rounded-md"><a href="Mauritius.html">Mautirius</a></li>
+									<li class="p-5 bg-blue-800 rounded-md"><a href="uk.html">UK</a></li>
+									<li class="p-5 bg-blue-700 rounded-md"><a href="kenya.html">Kenya</a></li>
+								</ul>
+							</div>
+							<div class="px-3 py-2 rounded text-white hover:bg-blue-600">
+								<a href="./about.html"> <span>About Us</span></a>
+							</div>
+							<div class="px-3 py-2 rounded text-white hover:bg-blue-600">
+								<a href="./contact.html"> <span>Contact Us</span></a>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</header>
+
+			<section class="flex flex-col text-white" id="title">
+				<div class="flex flex-col mb-24 md:mb-32">
+					<h1 class="md:text-6xl sm:text-4xl text-3xl ml-10 lg:ml-20 font-extrabold font-['Nunito',sans-serif] my-auto">Mauritius - Entertainment!</h1>
+				</div>
+			</section>
+		</div>
+
+		<main>
+			<!-- Services nav -->
+			<div class="grid grid-cols-2 lg:grid lg:grid-cols-6 gap-4 mx-20 font-['Nunito',sans-serif] font-extrabold text-white text-lg">
+				<!-- Country -->
+				<div class="md:col-span-1 p-5 bg-blue-600 hover:bg-blue-800 text-center rounded-md my-3 relative w-full h-16 lg:w-auto lg:h-auto">
+					<a href="Mauritius.html" class="absolute w-full h-full p-5 top-0 left-0 rounded-md">Mauritius</a>
+				</div>
+				<!-- service -->
+				<div class="md:col-span-1 p-5 bg-blue-600 hover:bg-blue-800 cursor-pointer text-center rounded-md my-3 relative w-full h-16 lg:w-auto lg:h-auto">
+					<a href="mauritius_travel.html" class="absolute w-full h-full p-5 top-0 left-0 rounded-md">Travel</a>
+				</div>
+				<!-- service -->
+				<div class="md:col-span-1 p-5 bg-blue-600 hover:bg-blue-800 cursor-pointer text-center rounded-md my-3 relative w-full h-16 lg:w-auto lg:h-auto">
+					<a href="mauritius_health.html" class="absolute w-full h-full p-5 top-0 left-0 rounded-md">Health</a>
+				</div>
+				<!-- service -->
+				<div class="md:col-span-1 p-5 bg-blue-600 hover:bg-blue-800 text-center rounded-md my-3 relative w-full h-16 lg:w-auto lg:h-auto">
+					<a href="mauritius_education.html" class="absolute w-full h-full p-5 top-0 left-0 rounded-md">Education</a>
+				</div>
+				<!-- service -->
+				<div class="md:col-span-1 p-5 bg-blue-600 hover:bg-blue-800 text-center rounded-md my-3 relative w-full h-16 lg:w-auto lg:h-auto">
+					<a href="mauritius_night_life.html" class="absolute w-full h-full p-5 top-0 left-0 rounded-md">Night Life</a>
+				</div>
+				<!-- service -->
+				<div class="md:col-span-1 p-5 bg-blue-800 text-center rounded-md my-3">Entertainment</div>
+			</div>
+			<!-- end -->
+			<div class="flex-grow mx-auto my-3 text-2xl xl:text-3xl text-center">
+				<p>
+					With Mautirius being one of the most popular island destinaitons in the world it makes <br />
+					sense that there is a lot of things to do on the island. Here are a few of our picks.
+				</p>
+			</div>
+
+			<!--Accomodation-->
+			<div class="bg-[#F1F1F1] py-4 h-auto" id="entertainment">
+				<h1 class="md:text-4xl text-3xl text-center font-extrabold relative text-white">Outdoor Activities</h1>
+				<div class="grid grid-rows-3 gap-4 mx-5 relative">
+					<!-- Service Cards -->
+					<!--Card 1-->
+					<div class="bg-[#C4C4C4] backdrop-filter backdrop-blur-xl bg-opacity-50 rounded-md my-4 lg:grid lg:grid-cols-2 lg:gap-0 grid grid-cols-1 gap-4 m-0 h-fit">
+						<div class="cols-span-1 p-2 sm:my-auto mx-auto w-full">
+							<img src="./Images/entertainment3.jpg" alt="Hotel" class="rounded-md object-cover" />
+						</div>
+						<div class="col-span-1 my-auto">
+							<div class="w-auto h-auto bg-white mx-2 mt-2 mb-2 my-auto rounded-md">
+								<h1 class="text-2xl md:text-3xl text-center font-extrabold text-blue-800">Full-Day Mauritius Swim With Dolphins</h1>
+								<p class="text-xl md:text-2xl text-center my-2 line-clamp-5 p-2">
+									During your time in Mauritius, take part in one of the island’s most popular activities on this guided all-day excursion, First, head to Tamarin Bay to swim with
+									dolphins in their natural environment, and spot beautiful coral and tropical fish while snorkeling.
+								</p>
+								<div class="flex">
+									<a
+										class="md:p-3 p-2 my-4 mx-auto text-xl md:text-2xl font-extrabold text-center bg-blue-900 hover:bg-blue-500 text-white rounded-full"
+										href="https://www.tripadvisor.com/AttractionProductReview-g298342-d12942660-Full_Day_Mauritius_Volcanic_Wonders_Tour_Including_Swimming_with_Wild_Dolphins-Bel.html"
+										target="blank"
+										>Learn More</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--End-->
+
+					<!--Card 2-->
+					<div class="bg-[#C4C4C4] backdrop-filter backdrop-blur-xl bg-opacity-50 rounded-md my-4 g:grid lg:grid-cols-2 lg:gap-0 grid grid-cols-1 gap-4 m-0 h-fit">
+						<div class="col-span-1 my-auto w-full">
+							<div class="w-auto h-auto bg-white mx-2 mt-2 mb-2 my-auto rounded-md">
+								<h1 class="text-2xl md:text-3xl text-center font-extrabold text-blue-800">The Gorgeous Ile aux Cerf: Speed boat</h1>
+								<p class="text-xl md:text-2xl text-center my-2 p-2">
+									Enjoy a fun and exciting full-day Speed Boat trip to the beautiful Ile aux Cerfs Island. This island will offer you a wealth of preciously preserved nature and an
+									imposing & beautiful landscape.
+								</p>
+								<div class="flex">
+									<a
+										class="md:p-3 p-2 my-4 mx-auto text-xl md:text-2xl font-extrabold text-center bg-blue-900 hover:bg-blue-500 text-white rounded-full"
+										href="https://www.tripadvisor.com/AttractionProductReview-g298342-d17685611-The_Gorgeous_Ile_aux_Cerf_Speed_boat_GRSE_Parasailing_Undersea_walk_Tube_Riding-Be.html"
+										target="blank"
+										>Learn More</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="cols-span-1 p-2 sm:my-auto mx-auto w-full">
+							<img src="./Images/entertainment4.jpg" alt="Hotel" class="rounded-md object-contain" />
+						</div>
+					</div>
+					<!--End-->
+
+					<!--Card 3-->
+					<div class="bg-[#C4C4C4] backdrop-filter backdrop-blur-xl bg-opacity-50 rounded-md my-4 g:grid lg:grid-cols-2 lg:gap-0 grid grid-cols-1 gap-4 m-0 h-fit">
+						<div class="cols-span-1 p-2 sm:my-auto mx-auto w-full">
+							<img src="./Images/entertainment5.jpg" alt="Hotel" class="rounded-md object-cover" />
+						</div>
+						<div class="col-span-1 my-auto h-auto w-auto">
+							<div class="w-auto h-auto bg-white mx-2 mt-2 mb-2 my-auto rounded-md">
+								<h1 class="text-2xl md:text-3xl text-center font-extrabold text-blue-800">Whale Watching</h1>
+								<p class="text-xl md:text-2xl text-center my-2 line-clamp-4 p-2">
+									See whales off the coast of Mauritius from a speed boat with your small group. Your guide will use a hydrophone in the water to locate where the whales are.
+									Maintaining a safe distance to keep from disturbing the whales, you will be close enough to get some great photos on this late morning excursion.
+								</p>
+								<div class="flex">
+									<a
+										class="md:p-3 p-2 my-4 mx-auto text-xl md:text-2xl font-extrabold text-center bg-blue-900 hover:bg-blue-500 text-white rounded-full"
+										href="https://www.tripadvisor.com/AttractionProductReview-g293816-d12976071-Whale_watching-Mauritius.html"
+										target="blank"
+										>Learn More</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--End-->
+				</div>
+			</div>
+			<!--End-->
+		</main>
+
+		<footer class="bg-slate-100 py-5">
+			<div class="flex justify-center">
+				<div class="w-1/2">
+					<p class="text-center">Copyright &copy; 2022 Safe Travels</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

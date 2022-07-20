@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SafeTravels - United Kingdom</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- JS file path for live Server -->
+		<!-- <script src="/script.js" defer></script> -->
+		<!-- JS File Path for xampp-->
+		<script src="../Coursework2/script.js" defer></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	</head>
+	<style>
+		/* file path for xampp */
+		/* #bg {
+			background-image: url(../Coursework2/Images/UK.jpg);
+			background-repeat: no-repeat;
+		}
+		#travel {
+			background-image: url(../Coursework2/Images/travel.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#health {
+			background-image: url(../Coursework2/Images/health.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#education {
+			background-image: url(../Coursework2/Images/education.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#entertainment {
+			background-image: url(../Coursework2/Images/entertainment.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#night_life {
+			background-image: url(../Coursework2/Images/night_life.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#service_name {
+			margin: auto;
+		} */
+		/* file path for live server */
+		#bg {
+			background-image: url(/Images/UK.jpg);
+			background-repeat: no-repeat;
+		}
+		#travel {
+			background-image: url(/Images/travel.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#health {
+			background-image: url(/Images/health.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#education {
+			background-image: url(/Images/education.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#entertainment {
+			background-image: url(/Images/entertainment.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#night_life {
+			background-image: url(/Images/night_life.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#service_name {
+			margin: auto;
+		}
+	</style>
+	<body class="overflow-auto font-['Nunito',sans-serif]">
+		<div id="bg" class="bg-cover bg-center overflow-auto pt-56">
+			<header class="flex bg-gradient-to-b from-[#091133] to-transparent fixed mt-[-224px] left-0 right-0">
+				<nav class="flex-grow text-white">
+					<img src="./Images/Logo.png" alt="Website_Logo" class="float-left w-auto h-40 p-5" />
+					<div class="hidden lg:block">
+						<ul class="list-none justify-center float-right text-2xl text-center p-5 z-0">
+							<li class="float-left p-5">
+								<a href="home.html" class="hover:bg-blue-800 p-5 rounded-md hover:text-white">Home</a>
+							</li>
+							<li class="float-left p-5">
+								<a href="#" class="hover:bg-blue-800 p-5 rounded-md hover:text-white relative" id="dropdown">Country</a>
+								<ul class="invisible rounded-md mt-4 absolute z-30 mx-1 top-20" id="dropdown-ul">
+									<li class="p-2 bg-blue-900 rounded-md hover:bg-blue-500"><a href="Mauritius.html">Mautirius</a></li>
+									<li class="p-2 bg-blue-800 rounded-md hover:bg-blue-500"><a href="uk.html">UK</a></li>
+									<li class="p-2 bg-blue-900 rounded-md hover:bg-blue-500"><a href="kenya.html">Kenya</a></li>
+								</ul>
+							</li>
+							<li class="float-left p-5">
+								<a href="about.html" class="hover:bg-blue-800 p-5 rounded-md hover:text-white">About Us</a>
+							</li>
+							<li class="float-left p-5">
+								<a href="contact.html" class="hover:bg-blue-800 p-5 rounded-md hover:text-white">Contact Us</a>
+							</li>
+						</ul>
+					</div>
+					<!-- Small screen navigation -->
+					<div class="float-right lg:hidden pr-4">
+						<button class="hover:bg-blue-900 rounded-md hover:text-white px-1 mx-3 my-16 nav-toggler focus:outline-none" id="menuIcon">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 lx-10" viewBox="0 0 20 20" fill="currentColor">
+								<path
+									fill-rule="evenodd"
+									d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+									clip-rule="evenodd"
+								></path>
+							</svg>
+						</button>
+					</div>
+					<!-- Small screen nav bar -->
+					<div class="bg-blue-900 w-full rounded-md absolute mt-32 hidden lg:hidden" id="navSm">
+						<div class="w-full">
+							<div class="px-3 py-2 rounded text-white hover:bg-blue-600">
+								<a href="./home.html"> <span>Home</span></a>
+							</div>
+							<div class="px-3 py-2 rounded text-white-500 hover:bg-blue-600">
+								<a href="#" class="rounded-md hover:text-white" id="smDropdown">Country</a>
+								<ul class="hidden rounded-md mt-4" id="smDropdown-ul">
+									<li class="p-5 bg-blue-700 rounded-md"><a href="Mauritius.html">Mautirius</a></li>
+									<li class="p-5 bg-blue-800 rounded-md"><a href="uk.html">UK</a></li>
+									<li class="p-5 bg-blue-700 rounded-md"><a href="kenya.html">Kenya</a></li>
+								</ul>
+							</div>
+							<div class="px-3 py-2 rounded text-white hover:bg-blue-600">
+								<a href="./about.html"> <span>About Us</span></a>
+							</div>
+							<div class="px-3 py-2 rounded text-white hover:bg-blue-600">
+								<a href="./contact.html"> <span>Contact Us</span></a>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</header>
+
+			<section class="flex flex-col text-white" id="title">
+				<div class="flex flex-col mb-24 md:mb-32">
+					<h1 class="md:text-6xl sm:text-4xl text-3xl ml-10 lg:ml-20 font-extrabold font-['Nunito',sans-serif] my-auto">Welcome to the UK!</h1>
+				</div>
+			</section>
+		</div>
+
+		<main>
+			<!-- Map and country description -->
+			<div id="map" class="grid grid-cols-1 gap-5 xl:grid xl:grid-cols-2 lg:gap-2 mx-10 my-10">
+				<div class="col-span-1 mx-auto w-auto h-auto">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4976666.883888633!2d-8.020381998732308!3d55.149231946423605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x25a3b1142c791a9%3A0xc4f8a0433288257a!2sUnited%20Kingdom!5e0!3m2!1sen!2ske!4v1648126328603!5m2!1sen!2ske"
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+						class="rounded-md shadow-2xl lg:w-[600px] lg:h-[450px] w-full h-full"
+					>
+					</iframe>
+				</div>
+				<div class="col-span-1 mx-auto my-auto text-2xl xl:text-4xl text-center">
+					<p>
+						The United Kingdom, made up of England, Scotland, Wales and Northern Ireland, is an island nation in northwestern Europe. England – birthplace of Shakespeare and The Beatles –
+						is home to the capital, London, a globally influential centre of finance and culture. England is also site of Neolithic Stonehenge, Bath’s Roman spa and centuries-old
+						universities at Oxford and Cambridge.
+					</p>
+				</div>
+			</div>
+			<!-- End -->
+
+			<!-- Api Information and chart -->
+			<section id="api_space">
+				<!-- Summary Data -->
+				<div class="w-full h-auto">
+					<h1 class="flex text-3xl font-extrabold justify-center text-blue-800">Covid 19 Information</h1>
+					<div class="" id="api_info"></div>
+					<!-- Chart -->
+					<div class="w-[85%] mx-auto">
+						<canvas id="myChart" class="w-full"></canvas>
+					</div>
+				</div>
+				<div class="text-center text-2xl mx-4 my-10 h-auto w-auto">
+					<p class="text-center text-2xl my-10 h-auto w-auto">
+						You do not need to complete a UK passenger locator<br />
+						form before you travel, take any COVID-19 tests or quarantine<br />
+						when you arrive in England.
+					</p>
+					<a
+						class="md:p-3 p-2 my-4 mx-auto text-xl md:text-2xl font-extrabold text-center bg-blue-900 hover:bg-blue-500 text-white rounded-full"
+						href="https://www.gov.uk/guidance/travel-to-england-from-another-country-during-coronavirus-covid-19"
+						target="blank"
+						>Learn More</a
+					>
+				</div>
+			</section>
+			<!-- Services -->
+			<section id="services" class="bg-slate-300 py-4">
+				<h1 class="flex justify-center text-3xl font-bold text-blue-800">Services</h1>
+				<div id="service_container" class="xl:grid xl:grid-cols-3 gap-5 grid grid-cols-1 mx-20 justify-center pt-2">
+					<div id="travel" class="xl:w-96 xl:h-72 w-full max-h-fit rounded-md mx-auto">
+						<a href="./uk_travel.html">
+							<div class="w-full h-full hover:bg-slate-800 rounded-md hover:bg-opacity-60 text-white">
+								<p class="text-3xl text-center h-full w-full font-extrabold py-[35%]">Travel</p>
+							</div>
+						</a>
+					</div>
+					<div id="health" class="xl:w-96 xl:h-72 w-full max-h-fit rounded-md mx-auto">
+						<a href="./uk_health.html">
+							<div class="w-full h-full hover:bg-slate-800 rounded-md hover:bg-opacity-60">
+								<p class="text-3xl text-white text-center font-extrabold py-[35%]" id="service_name">Health</p>
+							</div>
+						</a>
+					</div>
+					<div id="education" class="xl:w-96 xl:h-72 w-full max-h-fit rounded-md mx-auto">
+						<a href="./uk_education.html">
+							<div class="w-full h-full hover:bg-slate-800 rounded-md hover:bg-opacity-60">
+								<p class="text-3xl text-white text-center font-extrabold py-[35%]">Education</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="xl:grid xl:grid-cols-2 grid grid-cols-1 gap-5 mx-20 mt-5">
+					<div id="night_life" class="xl:w-96 xl:h-72 w-full max-h-fit rounded-md mx-auto">
+						<a href="./uk_night_life.html">
+							<div class="w-full h-full hover:bg-slate-800 rounded-md hover:bg-opacity-60">
+								<p class="text-3xl text-white text-center font-extrabold py-[35%]">Night Life</p>
+							</div>
+						</a>
+					</div>
+					<div id="entertainment" class="xl:w-96 xl:h-72 w-full max-h-fit rounded-md mx-auto">
+						<a href="./uk_entertainment.html">
+							<div class="w-full h-full text-center hover:bg-slate-800 rounded-md hover:bg-opacity-60">
+								<p class="text-3xl text-white place-self-center font-extrabold py-[35%]">Entertainment</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="bg-slate-100 py-5">
+			<div class="flex justify-center">
+				<div class="w-1/2">
+					<p class="text-center">Copyright &copy; 2022 Safe Travels</p>
+				</div>
+			</div>
+		</footer>
+		<!-- fetch api data -->
+		<script>
+			$(function () {
+				// Get Covid 19 Information
+				fetch("https://api.covid19api.com/summary")
+					.then((response) => response.json())
+					.then((data) => {
+						const country = data.Countries[183];
+						// console.log(country);
+						const active = country.TotalConfirmed - country.TotalRecovered - country.TotalDeaths;
+						$("#api_info").addClass("lg:grid lg:grid-cols-4 lg:gap-5  grid grid-cols-1 gap-5mx-10 justify-center my-5 text-2xl font-bold");
+						$("#api_info").html(
+							`
+								<div class=" col-span-1">
+										<p class="text-center">Confirmed <br /> Cases: <br /> ${country.TotalConfirmed}</p>
+								</div>
+								<div class="col-span-1">
+										<p class="text-center">Total <br /> Deaths:  <br /> ${country.TotalDeaths}</p>
+								</div>
+								<div class="col-span-1">
+										<p class="text-center">Total <br /> Recovered: <br /> ${country.TotalRecovered}</p>
+								</div>
+								<div class="col-span-1">
+										<p class="text-center">Active <br /> Cases: <br /> ${active} </p>
+								</div>`
+						);
+					});
+			});
+		</script>
+		<!-- create chart -->
+		<script>
+			// https://api.covid19api.com/dayone/country/mauritius/status/confirmed/live
+			const country = "United Kingdom";
+			fetch(`https://api.covid19api.com/total/dayone/country/${country}`)
+				.then((response) => response.json())
+				.then((data) => {
+					const date = data.map((data) => data.Date);
+					//const deaths = data.map((data) => data.Deaths);
+					const deaths = data.map((day, index) => {
+						if (index) return Math.abs(day.Deaths - data[index - 1].Deaths);
+						else day.Deaths;
+					});
+					// const confirmed = data.map((data) => data.Confirmed);
+					const confirmed = data.map((day, index) => {
+						if (index) return Math.abs(day.Confirmed - data[index - 1].Confirmed);
+						else day.Confirmed;
+					});
+					const ctx = document.getElementById("myChart").getContext("2d");
+					const myChart = new Chart(ctx, {
+						type: "line",
+						data: {
+							labels: date,
+							datasets: [
+								{
+									label: "Daily Covid Cases",
+									data: confirmed,
+									backgroundColor: "transparent",
+									borderColor: "red",
+									borderWidth: 1,
+								},
+								{
+									label: "Daily Deaths",
+									data: deaths,
+									backgroundColor: "transparent",
+									borderColor: "green",
+									borderWidth: 1,
+								},
+							],
+						},
+						options: {
+							elements: {
+								line: {
+									tension: 1,
+								},
+							},
+							responsive: true,
+							scales: {
+								y: {
+									beginAtZero: true,
+								},
+							},
+						},
+					});
+				});
+		</script>
+	</body>
+</html>

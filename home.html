@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SafeTravels - Home</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- JS file path for live Server -->
+		<!-- <script src="/script.js" defer></script> -->
+		<!-- JS File Path for xampp-->
+		<script src="../Coursework2/script.js" defer></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<script>
+			//file path for xampp
+			$(function () {
+				setInterval(function () {
+					$("#bg").css("background-image", "url('../Coursework2/Images/travelling.jpg')");
+					setTimeout(function () {
+						$("#bg").css("background-image", "url('../Coursework2/Images/home.jpg')");
+					}, 2500);
+				}, 5000);
+			});
+			//file path for live server
+			// $(function () {
+			// 	setInterval(function () {
+			// 		$("#bg").css("background-image", "url('/Images/travelling.jpg')");
+			// 		setTimeout(function () {
+			// 			$("#bg").css("background-image", "url('/Images/home.jpg')");
+			// 		}, 2500);
+			// 	}, 5000);
+			// });
+		</script>
+	</head>
+	<style>
+		/* file path for xampp */
+		/* #bg {
+			background-image: url(../Coursework2/Images/home.jpg);
+			background-repeat: no-repeat;
+		} */
+		/* file path for live server */
+		#bg {
+			background-image: url(/Images/home.jpg);
+			background-repeat: no-repeat;
+		}
+	</style>
+	<body class="overflow-auto font-['Nunito',sans-serif]">
+		<div id="bg" class="bg-cover bg-center overflow-auto pt-56">
+			<!-- <img src="./Images/home.jpg" alt="home img" class="max-h-fit h-full object-center aspect-video overflow-hidden w-full absolute top-0 left-0 right-0 z-0" /> -->
+			<header class="flex bg-gradient-to-b from-[#091133] to-transparent fixed mt-[-224px] left-0 right-0">
+				<nav class="flex-grow text-white">
+					<img src="./Images/Logo.png" alt="Website_Logo" class="float-left w-auto h-40 p-5" />
+					<div class="hidden lg:block">
+						<ul class="list-none justify-center float-right text-2xl text-center p-5 z-0">
+							<li class="float-left p-5">
+								<a href="home.html" class="hover:bg-blue-800 p-5 rounded-md hover:text-white">Home</a>
+							</li>
+							<li class="float-left p-5">
+								<a href="#" class="hover:bg-blue-800 p-5 rounded-md hover:text-white relative" id="dropdown">Country</a>
+								<ul class="invisible rounded-md mt-4 absolute z-30 mx-1 top-20" id="dropdown-ul">
+									<li class="p-2 bg-blue-900 rounded-md hover:bg-blue-500"><a href="Mauritius.html">Mautirius</a></li>
+									<li class="p-2 bg-blue-800 rounded-md hover:bg-blue-500"><a href="uk.html">UK</a></li>
+									<li class="p-2 bg-blue-900 rounded-md hover:bg-blue-500"><a href="kenya.html">Kenya</a></li>
+								</ul>
+							</li>
+							<li class="float-left p-5">
+								<a href="about.html" class="hover:bg-blue-800 p-5 rounded-md hover:text-white">About Us</a>
+							</li>
+							<li class="float-left p-5">
+								<a href="contact.html" class="hover:bg-blue-800 p-5 rounded-md hover:text-white">Contact Us</a>
+							</li>
+						</ul>
+					</div>
+					<!-- Small screen navigation -->
+					<div class="float-right lg:hidden pr-4">
+						<button class="hover:bg-blue-900 rounded-md hover:text-white px-1 mx-3 my-16 nav-toggler focus:outline-none" id="menuIcon">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 lx-10" viewBox="0 0 20 20" fill="currentColor">
+								<path
+									fill-rule="evenodd"
+									d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+									clip-rule="evenodd"
+								></path>
+							</svg>
+						</button>
+					</div>
+					<!-- Small screen nav bar -->
+					<div class="bg-blue-900 w-full rounded-md absolute mt-32 hidden lg:hidden" id="navSm">
+						<div class="w-full">
+							<div class="px-3 py-2 rounded text-white hover:bg-blue-600">
+								<a href="./home.html"> <span>Home</span></a>
+							</div>
+							<div class="px-3 py-2 rounded text-white-500 hover:bg-blue-600">
+								<a href="#" class="rounded-md hover:text-white" id="smDropdown">Country</a>
+								<ul class="hidden rounded-md mt-4" id="smDropdown-ul">
+									<li class="p-5 bg-blue-700 rounded-md"><a href="Mauritius.html">Mautirius</a></li>
+									<li class="p-5 bg-blue-800 rounded-md"><a href="uk.html">UK</a></li>
+									<li class="p-5 bg-blue-700 rounded-md"><a href="kenya.html">Kenya</a></li>
+								</ul>
+							</div>
+							<div class="px-3 py-2 rounded text-white hover:bg-blue-600">
+								<a href="./about.html"> <span>About Us</span></a>
+							</div>
+							<div class="px-3 py-2 rounded text-white hover:bg-blue-600">
+								<a href="./contact.html"> <span>Contact Us</span></a>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</header>
+
+			<section class="flex flex-col text-white" id="title">
+				<div class="flex flex-col mb-24 md:mb-32">
+					<h1 class="md:text-6xl sm:text-4xl text-3xl ml-10 lg:ml-20 font-extrabold font-['Nunito',sans-serif] my-auto">Welcome!</h1>
+					<p class="lg:ml-20 ml-10 md:text-3xl text-xl justify-center w-auto">
+						"A journey of a thousand miles <br />
+						begins with a single step." <br />
+						- Lao Tzu
+					</p>
+				</div>
+			</section>
+		</div>
+
+		<main>
+			<section class="bg-slate-100 pt-5 pb-5 h-full">
+				<h1 class="font-extrabold text-2xl text-center text-blue-800" id="countrySelection">Country Selection</h1>
+				<div id="countries" class="md:grid md:grid-cols-3 grid grid-cols-1 gap-5 mx-10">
+					<div id="UK" class="col-span-1">
+						<a href="uk.html">
+							<img src="./Images/UK.jpg" alt="Uk_image" class="rounded-md shadow-md shadow-violet-600" />
+						</a>
+						<p class="text-2xl text-center font-extrabold mt-5 text-blue-800">UK</p>
+					</div>
+					<div id="Mautirius" class="col-span-1">
+						<a href="Mauritius.html">
+							<img src="./Images/Mauritius.jpg" alt="MU_image" class="rounded-md shadow-md shadow-blue-600" />
+						</a>
+						<p class="text-2xl text-center font-extrabold mt-5 text-blue-800">Mauritius</p>
+					</div>
+					<div id="Kenya" class="col-span-1">
+						<a href="kenya.html">
+							<img src="./Images/Kenya.jpg" alt="KE_image" class="rounded-md shadow-md shadow-[#e1d8b2]" />
+						</a>
+						<p class="text-2xl text-center font-extrabold mt-5 text-blue-800">Kenya</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="bg-slate-100 py-5">
+			<div class="flex justify-center">
+				<div class="w-1/2">
+					<p class="text-center">Copyright &copy; 2022 Safe Travels</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
