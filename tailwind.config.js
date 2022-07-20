@@ -1,5 +1,5 @@
 module.exports = {
-	content: ["./jsonTest.html", "./style.css"],
+	content: ["./style.css"],
 	theme: {
 		extend: {},
 	},
